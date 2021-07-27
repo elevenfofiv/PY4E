@@ -1,4 +1,7 @@
-def grader(name:str, score:int):
+def grader(name:str, score:int) -> None:
+    '''
+    점수에 따른 학점 배정 함수
+    '''
     if (score >= 95) & (score <= 100):
         grade = 'A+'
     elif (score >= 90) & (score < 94):
@@ -18,15 +21,14 @@ def grader(name:str, score:int):
     elif (score < 64):
         grade = 'F'
     
-    return grade
-
-def main():
-    name = input('학생이름:')
-    score = int(input('점수:'))
     print(f'학생이름:{name}')
     print(f'점수:{score}')
-    print(f'학점:{grader(name,score)}')
+    print(f'학점:{grade}')
 
-if __name__ =='__main__':
+def main():
+    grader('이호창', 99)
+
+
+if __name__ == '__main__':  #main함수를 호출하기 위한 부분
     main()
     
