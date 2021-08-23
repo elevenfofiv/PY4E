@@ -1,16 +1,16 @@
 import random
 
 def bs31():
-    bs31_list = []
+    bs31_list = [] 
     print('베스킨라빈스 써리원 게임')
     while 1:
         my_turn = input("my turn - 숫자를 입력하세요: ")
-        my_turn = [int(i) for i in my_turn.split(' ')]
+        my_turn = [int(i) for i in my_turn.split(' ')] # 입력한 숫자를 공백을 기준으로 분리 후 int형으로 변환
         if len(my_turn) > 3 :
             print('다시 입력 하시오')
             continue
         elif (len(bs31_list) != 0):
-            if my_turn[0] < bs31_list[-1]:
+            if my_turn[0] < bs31_list[-1]: # 내가 입력한 수가 현재 숫자보다 작으면 다시 입력
                 print('다시 입력 하시오')
                 continue
 
