@@ -6,10 +6,10 @@ def good_customer(info:str) -> None:
     customer_dict['sex'] = []
     customer_dict['region'] = []
     customer_dict['buying'] = []
-    info = info.replace('x', '000-0000-0000')
+    info = info.replace('x', '000-0000-0000')   # 전화번호를 000-0000-0000 양식으로 전환
     info = info.split(',')
-    print(info)
-    for idx, i in enumerate(info):
+
+    for idx, i in enumerate(info):  # 고객정보를 항목별로 customer_dict에 저장
         if idx%6 == 0:
             customer_dict['ID'].append(i)
         elif idx%6 == 1:
@@ -25,7 +25,7 @@ def good_customer(info:str) -> None:
 
     print(customer_dict)
 
-    coupon_customer = {}
+    coupon_customer = {}    # 할인 쿠폰 받을 고객 정보를 저장할 Dictionary 선언
     coupon_customer['ID'] = []
     coupon_customer['age'] = []
     coupon_customer['tel'] = []
